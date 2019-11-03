@@ -31,6 +31,10 @@ Linux Bash: export FLASK_APP=flask_app
 
 flask run
 ```
+Generate development database with dummy data
+```
+python tests/generateDB.py
+```
 ## Testing:
 
 ```
