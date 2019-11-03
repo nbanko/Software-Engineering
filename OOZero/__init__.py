@@ -5,7 +5,6 @@ def create_app(config="OOZero.config.DevelopmentConfig"):
     app.config.from_object(config)
     app.config.from_envvar('OOZERO_CONFIG')
 
-
     from OOZero.model import db
     db.init_app(app)
 
