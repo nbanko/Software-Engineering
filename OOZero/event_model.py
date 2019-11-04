@@ -130,6 +130,8 @@ def createEvent(name, owner, event_type, description=None, start_time=None, end_
             raise TypeError("Encrypted notes must have a password")
     elif not password is None:
         raise TypeError("Only encrypted notes can have a password")
+    if type(owner) != int:
+        raise TypeError("Owner id must be an int")
 
     if event_type == EventType.ENCRYPTED:
         description = encrypt(description, password)
