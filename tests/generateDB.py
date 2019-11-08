@@ -4,6 +4,7 @@ from OOZero.model import db
 import OOZero.user_model as user
 import OOZero.event_model as event
 import datetime
+import argparse
 
 def generateDB():
     db.drop_all()
@@ -26,6 +27,14 @@ def generatePopulateDB():
 
 
 if __name__ == "__main__":
-    app = create_app("OOZero.config.DevelopmentConfig")
+    parser = argparse.ArgumentParser(description="Generate OOZero sqlite database")
+    parser.add_argument('-c', type=str, metavar='CONFIG', default="DevelopmentConfig", help="Which set of settings found under OOZero/config.py to load, determins db name and location")
+    parser.add_argument('-g', type=bool, metavar='GENERATE', default=False, help='Generate dummy data for testing, defaults to False')
+    args = parser.parse_args()
+
+    app = create_app("OOZero.config." + args.c)
     with app.app_context():
-        generatePopulateDB()
+        if args.g:
+            generatePopulateDB()
+        else:
+            generateDB()
