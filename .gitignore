@@ -5,4 +5,4 @@ __pycache__/
 *.db
 instance/
 .pytest_cache/
-dir_to_ignore/tests
+tests/*
