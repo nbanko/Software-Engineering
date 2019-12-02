@@ -10,7 +10,7 @@ from OOZero.model import db
 import OOZero.user_model as user
 import OOZero.event_model as event
 import datetime
-import create_app
+from tests import create_app
 
 app = create_app()
 
