@@ -1,5 +1,6 @@
 import unittest
 from unittest import mock
+from mock import MagicMock
 from flask import Flask
 from flask_testing import TestCase
 from OOZero import create_app
