@@ -5,17 +5,20 @@ except ImportError:
     from mock import MagicMock
 from flask import Flask
 from flask_testing import TestCase
-from OOZero import create_app
+# from OOZero import create_app
 from OOZero.model import db
 import OOZero.user_model as user
 import OOZero.event_model as event
 import datetime
+import create_app
+
+app = create_app()
 
 class TestUser(TestCase, unittest.TestCase):
 
-    def create_app(self):
-        app = create_app("OOZero.config.TestingConfig")
-        return app
+    #def create_app(self):
+       # app = create_app("OOZero.config.TestingConfig")
+        # return app
 
     @classmethod
     def setUpClass(cls):
