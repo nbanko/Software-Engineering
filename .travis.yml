@@ -9,5 +9,8 @@ python:
 
 install:
   - pip install -r requirements.txt
+  - pip install mock
   
-script: python setup.py install
+script: 
+  #python setup.py install
+  pytest
