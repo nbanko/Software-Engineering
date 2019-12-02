@@ -1,6 +1,6 @@
 # Software Engineering(Team 00-zero)
 
-https://travis-ci.org/nbanko/Software-Engineering.svg?branch=master
+[![Build Status](https://travis-ci.org/nbanko/Software-Engineering.svg?branch=master)](https://travis-ci.org/nbanko/Software-Engineering)
 
 ## Info
 [Our Website](http://augmentedmode.pythonanywhere.com/)
